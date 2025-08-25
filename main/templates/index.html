@@ -44,12 +44,31 @@
     .kpi .card{flex:1;min-width:180px;text-align:center}
     @media (max-width:900px){ .hero{grid-template-columns:1fr} }
     /* Navbar Responsive */
-    @media (max-width:600px){
-      header { flex-direction: column; align-items:flex-start; gap:10px; }
-      nav { flex-direction: column; align-items: flex-start; width: 100%; gap: 0;}
-      nav a { margin: 5px 0 0 0; display: block; width: 100%; }
-      nav a.btn.download { width: 100%; margin-left: 0; margin-top: 8px;}
-    }
+    @media (max-width:600px)
+    nav {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+
+    nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 0;
+            margin: 0 6px;
+            display: inline-block;
+             width: auto;
+           }
+    nav a.btn.download {
+                        margin-left: 16px;
+                        width: auto;
+                        text-align: center;
+                        }
+  
+
+    
     /* Contact Section */
     #contact { margin: 36px 0; }
     .contact-box {
@@ -155,7 +174,7 @@
       </div>
       <div class="card">
         <h3 style="margin-top:0">Quick Intro</h3>
-        <p class="muted">My name is Vigneshkumar G, and I am from Rajapalayam. I have completed my B.Sc. in Computer Science... (intro continues)</p>
+        <p class="muted">My name is Vigneshkumar G, and I am from Rajapalayam. I have completed my B.Sc. in Computer Science...</p>
         <div id="badges">
           <span class="pill">Python</span><span class="pill">Django</span><span class="pill">DRF</span>
           <span class="pill">PostgreSQL</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JS</span>
