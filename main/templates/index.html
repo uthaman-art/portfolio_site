@@ -1,0 +1,238 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vignesh Kumar — Portfolio</title>
+  <meta name="description" content="Software Developer Portfolio of Vignesh Kumar">
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --muted:#94a3b8; --acc:#22d3ee; --text:#e5e7eb; }
+    *{box-sizing:border-box} html,body{margin:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;
+         background:linear-gradient(120deg,#0b1023,#0f172a); color:var(--text)}
+    .wrap{max-width:1050px;margin:0 auto;padding:28px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:18px}
+    nav a{color:var(--muted);text-decoration:none;margin:0 10px;font-weight:600}
+    nav a:hover{color:var(--acc)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:36px 0}
+    .tag{display:inline-block;background:#0ea5a422;color:#67e8f9;border:1px solid #155e75;
+         padding:4px 10px;border-radius:999px;font-size:12px}
+    h1{font-size:44px;line-height:1.1;margin:12px 0 8px}
+    .muted{color:var(--muted)}
+    .cta{display:flex;gap:12px;margin-top:16px}
+    .btn{padding:10px 16px;border-radius:12px;border:1px solid #1f2937;text-decoration:none;color:var(--text)}
+    .btn.primary{background:linear-gradient(90deg,#06b6d4,#22d3ee);color:#03272a;font-weight:700}
+    .btn.download{background:#22c55e;color:#03272a;font-weight:700}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:18px;padding:18px}
+    section{margin:36px 0}
+    .grid{display:grid;gap:16px}
+    .cols-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .project img{width:100%;height:150px;object-fit:cover;border-radius:12px;border:1px solid #243244}
+    footer{padding:24px 0;color:var(--muted);text-align:center}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid #334155;margin:6px 6px 0 0}
+    .kpi{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+    .kpi .card{flex:1;min-width:180px;text-align:center}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
+
+    /* Contact Section */
+    #contact { margin: 36px 0; }
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 24px;
+      background: var(--card);
+      border: 1px solid #1f2937;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .contact-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .contact-content {
+      padding: 24px;
+    }
+    .contact-content h3 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+    .contact-content form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-content input,
+    .contact-content textarea {
+      padding: 10px;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      background: #0f172a;
+      color: var(--text);
+    }
+    .contact-content textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .contact-content button {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(90deg,#06b6d4,#22d3ee);
+      color: #03272a;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .contact-content .info {
+      margin-top: 20px;
+      color: var(--muted);
+    }
+    .contact-content .socials {
+      display: flex;
+      gap: 18px;
+      margin-top: 12px;
+    }
+    .contact-content .socials a {
+      font-size: 22px;
+      color: var(--text);
+      transition: color 0.3s;
+    }
+    .contact-content .socials a:hover {
+      color: var(--acc);
+    }
+    @media (max-width: 800px) {
+      .contact-box { grid-template-columns: 1fr; }
+      .contact-img { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <strong>VK</strong>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="btn download" href="{% static 'files/VigneshKumar_G_CV-1.pdf' %}" download>Download CV</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div>
+        <span class="tag">Open to work</span>
+        <h1>Hi, I’m <span style="color:#67e8f9">VigneshKumar G</span> Python Stack Developer</h1>
+        <p class="muted">I build fast, clean web apps with Python, Django and modern frontend basics.</p>
+        <div class="kpi">
+          <div class="card"><div style="font-size:28px;font-weight:800">3+</div><div class="muted">Completed mini-projects</div></div>
+          <div class="card"><div style="font-size:28px;font-weight:800">1+</div><div class="muted">Years learning</div></div>
+          <div class="card"><div style="font-size:28px;font-weight:800">100%</div><div class="muted">On-Site or Remote ready</div></div>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Quick Intro</h3>
+        <p class="muted">My name is Vigneshkumar G, and I am from Rajapalayam. I have completed my B.Sc. in Computer Science... (intro continues)</p>
+        <div id="badges">
+          <span class="pill">Python</span><span class="pill">Django</span><span class="pill">DRF</span>
+          <span class="pill">PostgreSQL</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>I'm a Python Stack developer from India. I enjoy building CRUD apps, authentication flows, and clean admin panels. Currently seeking an entry-level role or internships.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid cols-3">
+        <div class="card"><strong>Django</strong><p class="muted">ORM, templates, auth, forms, admin, class-based views</p></div>
+        <div class="card"><strong>APIs</strong><p class="muted">Django REST Framework, JWT auth, pagination</p></div>
+        <div class="card"><strong>DB & Tools</strong><p class="muted">PostgreSQL, SQLite, Git, Linux, VS Code</p></div>
+        <div class="card"><strong>Technologies</strong><p class="muted">C, C++, Python, Sql</p></div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid cols-3">
+        <article class="card project">
+          <img src="https://picsum.photos/seed/shop/600/300" alt="Project preview">
+          <h3>E-commerce Mini Project</h3>
+          <p class="muted">Products, cart, orders, auth. Django + SQLite.</p>
+          <a class="btn" href="#" target="_blank">Live</a>
+          <a class="btn" href="#" target="_blank">Code</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <!-- Left Side Image -->
+        <div class="contact-img">
+          <img src="{% static 'files/myphoto.jpg' %}" alt="Vignesh Kumar" />
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="contact-content">
+          <h3>Contact Me</h3>
+          <!-- ✅ Updated Form -->
+          <form method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Your name" required />
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Your email" required />
+
+            <label>Message</label>
+            <textarea name="message" placeholder="Write your message..." required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div class="info">
+            <p><strong>Email</strong><br> guruvignesh054@gmail.com</p>
+            <p><strong>I am in</strong><br> Rajapalayam, Tamil Nadu, India</p>
+            
+            <!-- Download CV Button inside Contact -->
+            <p>
+              <a class="btn download" href="{% static 'files/VigneshKumar_G_CV-1.pdf' %}" download>📑 Download CV</a>
+            </p>
+
+            <!-- Social Icons -->
+            <div class="socials">
+              <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/vigneshkumar-gurusamy-677718298" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/_.itz.vicky_" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© <span id="y"></span> VigneshKumar — Built with Django</footer>
+  </div>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
