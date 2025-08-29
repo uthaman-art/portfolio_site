@@ -1,13 +1,13 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vignesh Kumar — Portfolio</title>
-  <meta name="description" content="Software Developer Portfolio of Vignesh Kumar">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Vignesh Kumar — Portfolio</title>
+        <meta name="description" content="Software Developer Portfolio of Vignesh Kumar">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
     :root { --bg:#0f172a; --card:#111827; --muted:#94a3b8; --acc:#22d3ee; --text:#e5e7eb; }
     *{box-sizing:border-box} html,body{margin:0}
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;
@@ -47,10 +47,11 @@
     @media (max-width:600px)
     nav {
           display: flex;
-          align-items: center;
+          align-items; center;
           gap: 16px;
           flex-wrap: wrap;
         }
+
 
     nav a {
             color: var(--muted);
@@ -67,6 +68,7 @@
                         text-align: center;
                         }
   
+
 
     
     /* Contact Section */
@@ -140,133 +142,196 @@
       .contact-box { grid-template-columns: 1fr; }
       .contact-img { display: none; }
     }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <strong class="logo">VK</strong>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a class="btn download" href="{% static 'files/VigneshKumar_G_CV-1.pdf' %}" download>Download CV</a>
-      </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div>
-        <span class="tag">Open to work</span>
-        <h1>Hi, I’m <span style="color:#67e8f9">VigneshKumar G</span> Python Stack Developer</h1>
-        <p class="muted">I build fast, clean web apps with Python, Django and modern frontend basics.</p>
-        <div class="kpi">
-          <div class="card"><div style="font-size:28px;font-weight:800">3+</div><div class="muted">Completed mini-projects</div></div>
-          <div class="card"><div style="font-size:28px;font-weight:800">1+</div><div class="muted">Years learning</div></div>
-          <div class="card"><div style="font-size:28px;font-weight:800">100%</div><div class="muted">On-Site or Remote ready</div></div>
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                <strong class="logo">VK</strong>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                    <a class="btn download" href="{% static 'files/VigneshKumar_G_CV-1.pdf' %}" target="_blank">View CV</a>
+                </nav>
+            </header>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div>
+                    <span class="tag">Open to work</span>
+                    <h1>
+                        Hi, I’m
+                        <span style="color:#67e8f9">VigneshKumar G</span>
+                        Python Stack Developer
+                    </h1>
+                    <p class="muted">I build fast, clean web apps with Python, Django and modern frontend basics.</p>
+                    <div class="kpi">
+                        <div class="card">
+                            <div style="font-size:28px;font-weight:800">3+</div>
+                            <div class="muted">Completed mini-projects</div>
+                        </div>
+                        <div class="card">
+                            <div style="font-size:28px;font-weight:800">1+</div>
+                            <div class="muted">Years learning</div>
+                        </div>
+                        <div class="card">
+                            <div style="font-size:28px;font-weight:800">100%</div>
+                            <div class="muted">On-Site or Remote ready</div>
+                        </div>
+                    </div>
+                    <div class="cta">
+                        <a class="btn primary" href="#projects">View Projects</a>
+                        <a class="btn" href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top:0">Quick Intro</h3>
+                    <p class="muted">My name is Vigneshkumar G, and I am from Rajapalayam. I have completed my B.Sc. in Computer Science...</p>
+                    <div id="badges">
+                        <span class="pill">Python</span>
+                        <span class="pill">Django</span>
+                        <span class="pill">DRF</span>
+                        <span class="pill">PostgreSQL</span>
+                        <span class="pill">HTML</span>
+                        <span class="pill">CSS</span>
+                        <span class="pill">JS</span>
+                    </div>
+                </div>
+            </section>
+            <!-- About -->
+            <section id="about">
+                <h2>About</h2>
+                <div class="card">
+                    <p>I'm a Python Stack developer from India. I enjoy building CRUD apps, authentication flows, and clean admin panels. Currently seeking an entry-level role or internships.</p>
+                </div>
+            </section>
+            <!-- Skills -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="grid cols-3">
+                    <div class="card">
+                        <strong>Django</strong>
+                        <p class="muted">ORM, templates, auth, forms, admin, class-based views</p>
+                    </div>
+                    <div class="card">
+                        <strong>APIs</strong>
+                        <p class="muted">Django REST Framework, JWT auth, pagination</p>
+                    </div>
+                    <div class="card">
+                        <strong>DB & Tools</strong>
+                        <p class="muted">PostgreSQL, SQLite, Git, Linux, VS Code</p>
+                    </div>
+                    <div class="card">
+                        <strong>Technologies</strong>
+                        <p class="muted">C, C++, Python, Sql</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Education (NEW) -->
+            <section id="education">
+                <h2>Education</h2>
+                <div class="card">
+                    <p>
+                        <strong>College:</strong>
+                        Arulmigu Kalasalingam College of Arts and Science
+                    </p>
+                    <p>
+                        <strong>Course:</strong>
+                        B.Sc. Computer Science
+                    </p>
+                    <p>
+                        <strong>Languages Known:</strong>
+                        Tamil &amp; English
+                    </p>
+                    <p>
+                        <strong>Hobby:</strong>
+                        Hearing Songs &amp; Playing Cricket
+                    </p>
+                </div>
+            </section>
+            <!-- Projects -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="grid cols-3">
+                    <article class="card project">
+                        <img src="https://picsum.photos/seed/shop/600/300" alt="Project preview">
+                        <h3>E-commerce Mini Project</h3>
+                        <p class="muted">Products, cart, orders, auth. Django + SQLite.</p>
+                        <a class="btn" href="#" target="_blank">Live</a>
+                        <a class="btn" href="#" target="_blank">Code</a>
+                    </article>
+                </div>
+            </section>
+            <!-- Contact -->
+            <section id="contact">
+                <h2>Contact</h2>
+                <div class="contact-box">
+                    <!-- Left Side Image -->
+                    <div class="contact-img">
+                        <img src="{% static 'files/images.jpeg' %}" alt="Vignesh Kumar">
+                    </div>
+                    <!-- Right Side Content -->
+                    <div class="contact-content">
+                        <h3>Contact Me</h3>
+                        <form method="POST" action="{% url 'contact' %}">
+                            {% csrf_token %}
+                            <label>Full Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your name"
+                                required
+                            >
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Your email"
+                                required
+                            >
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Write your message..." required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                        <div class="info">
+                            <p>
+                                <strong>Email</strong>
+                                <br>
+                                <a href="mailto:guruvignesh054@gmail.com">guruvignesh054@gmail.com</a>
+                            </p>
+                            <p>
+                                <strong>I am in</strong>
+                                <br>
+                                Rajapalayam, Tamil Nadu, India
+                            </p>
+                            <!-- View CV Button inside Contact -->
+                            <p>
+                                <a class="btn download" href="{% static 'files/VigneshKumar_G_CV-1.pdf' %}" target="_blank">📑 View CV</a>
+                            </p>
+                            <!-- Social Icons -->
+                            <div class="socials">
+                                <a href="https://github.com/yourusername" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/vigneshkumar-gurusamy-677718298" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.instagram.com/_.itz.vicky_" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                ©
+                <span id="y"></span>
+                VigneshKumar — Built with Django
+            </footer>
         </div>
-        <div class="cta">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn" href="#contact">Contact</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">Quick Intro</h3>
-        <p class="muted">My name is Vigneshkumar G, and I am from Rajapalayam. I have completed my B.Sc. in Computer Science...</p>
-        <div id="badges">
-          <span class="pill">Python</span><span class="pill">Django</span><span class="pill">DRF</span>
-          <span class="pill">PostgreSQL</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JS</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <div class="card">
-        <p>I'm a Python Stack developer from India. I enjoy building CRUD apps, authentication flows, and clean admin panels. Currently seeking an entry-level role or internships.</p>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="grid cols-3">
-        <div class="card"><strong>Django</strong><p class="muted">ORM, templates, auth, forms, admin, class-based views</p></div>
-        <div class="card"><strong>APIs</strong><p class="muted">Django REST Framework, JWT auth, pagination</p></div>
-        <div class="card"><strong>DB & Tools</strong><p class="muted">PostgreSQL, SQLite, Git, Linux, VS Code</p></div>
-        <div class="card"><strong>Technologies</strong><p class="muted">C, C++, Python, Sql</p></div>
-      </div>
-    </section>
-
-    <!-- Education (NEW) -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card">
-        <p><strong>College:</strong> Arulmigu Kalasalingam College of Arts and Science</p>
-        <p><strong>Course:</strong> B.Sc. Computer Science</p>
-        <p><strong>Languages Known:</strong> Tamil &amp; English</p>
-        <p><strong>Hobby:</strong> Hearing Songs &amp; Playing Cricket</p>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid cols-3">
-        <article class="card project">
-          <img src="https://picsum.photos/seed/shop/600/300" alt="Project preview">
-          <h3>E-commerce Mini Project</h3>
-          <p class="muted">Products, cart, orders, auth. Django + SQLite.</p>
-          <a class="btn" href="#" target="_blank">Live</a>
-          <a class="btn" href="#" target="_blank">Code</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-box">
-        <!-- Left Side Image -->
-        <div class="contact-img">
-          <img src="{% static 'files/images.jpeg' %}" alt="Vignesh Kumar" />
-        </div>
-        <!-- Right Side Content -->
-        <div class="contact-content">
-          <h3>Contact Me</h3>
-          <form method="POST" action="{% url 'contact' %}">
-            {% csrf_token %}
-            <label>Full Name</label>
-            <input type="text" name="name" placeholder="Your name" required />
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Your email" required />
-            <label>Message</label>
-            <textarea name="message" placeholder="Write your message..." required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-          <div class="info">
-            <p><strong>Email</strong><br> guruvignesh054@gmail.com</p>
-            <p><strong>I am in</strong><br> Rajapalayam, Tamil Nadu, India</p>
-            <!-- Download CV Button inside Contact -->
-            <p>
-              <a class="btn download" href="{% static 'files/VigneshKumar_G_CV-1.pdf' %}" download>📑 Download CV</a>
-            </p>
-            <!-- Social Icons -->
-            <div class="socials">
-              <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/vigneshkumar-gurusamy-677718298" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://www.instagram.com/_.itz.vicky_" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>© <span id="y"></span> VigneshKumar — Built with Django</footer>
-  </div>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-</body>
+        <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+    </body>
 </html>
